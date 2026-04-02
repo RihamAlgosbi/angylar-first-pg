@@ -1,0 +1,19 @@
+<h1>Structure Directive</h1>
+<p *ngIf="isFull">Hello {{userName}}</p>
+
+<div [ngSwitch]="userRole">
+    <p *ngSwitchCase="'admin'">hello admin</p>
+     <p *ngSwitchCase="'user'">hello user</p>
+      <p *ngSwitchDefault>hello manageer</p>
+</div>
+<!-- <div *ngFor="let item of fruits ">
+<p>{{item}}</p>
+</div> -->
+
+<div *ngFor="let product of products"class="card mb-3">
+  <img [src]="product.image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text"><small class="text-body-secondary">{{product.price}}</small></p>
+  </div>
+</div>

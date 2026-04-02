@@ -1,0 +1,11 @@
+<h2 class="bg-danger" ngNonBindable>Hello from new component {{name}} 🎉</h2>
+<img class="w-50" [src]="img">
+<p [class]="isTrue ? 'active':'noactive'">hello</p>
+<p [style.color]="isTrue ?'red':'green' ">test {{user}}</p>
+<button class="btn btn-black" (click)="log()">click</button>
+<input type="text" class="form-control" (input)="showalert($event)"/>
+<input type="text" class="form-control" (keydown.e)="showalert($event)"/>
+<input type="text" placeholder="search" [(ngModel)]="searchInput">
+{{searchInput}}
+<p [ngClass]="{'bg-red':isTrue && isActive}">hiiiiii</p>
+<p [ngStyle]="{'color':isTrue? 'red' : 'orange' }">test ngStle</p>
