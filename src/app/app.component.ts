@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Home } from './pages/app-home/home.components';
 import { AboutComponent } from './about/about.component';
@@ -10,7 +10,7 @@ import { ContentProjection2Component } from './content-projection2/content-proje
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Home,AboutComponent,StrDirComponent,OutComponent,ContentProjectionComponent,ContentProjection2Component],
+  imports: [Home,AboutComponent,StrDirComponent,OutComponent,ContentProjectionComponent,ContentProjection2Component,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -18,5 +18,11 @@ export class AppComponent {
    title = 'angular-first-pg';
   userName:string='riham algosbi'
   getFromChild:string=''
+
+  @ViewChild('el',{static:true}) myEl! :ElementRef
+
+  ngonInit():void{
+    console.log(this.myEl)
+  }
  
 }

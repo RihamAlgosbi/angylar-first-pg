@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ContentProjectionComponent {
 
-  userName:string='riham'
-  userEmail:string='riham@gmail.com'
-  userPhone:number=12323454
+  // userName:string='riham'
+  // userEmail:string='riham@gmail.com'
+  // userPhone:number=12323454
 }

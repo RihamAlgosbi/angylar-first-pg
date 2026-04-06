@@ -6,7 +6,10 @@
 <app-out (emitData)="getFromChild=$event"></app-out>
 <h2>{{getFromChild}}</h2>
 <app-content-projection>
-    <p class="first-p">hello from here1</p>
+    <!-- <p class="first-p">hello from here1</p>
     <p class="second-p">hello from here2</p>
-    <p>hello from here3</p>
+    <p>hello from here3</p> -->
+    <app-content-projection2></app-content-projection2>
 </app-content-projection>
+<p #el>hiii</p>
+<router-outlet></router-outlet>
