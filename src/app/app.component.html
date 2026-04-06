@@ -2,4 +2,11 @@
 <h2>user name : {{userName}}</h2>
 <!-- <app-home></app-home>
 <app-about></app-about> -->
-<app-str-dir></app-str-dir>
+<!-- <app-str-dir></app-str-dir> -->
+<app-out (emitData)="getFromChild=$event"></app-out>
+<h2>{{getFromChild}}</h2>
+<app-content-projection>
+    <p class="first-p">hello from here1</p>
+    <p class="second-p">hello from here2</p>
+    <p>hello from here3</p>
+</app-content-projection>
